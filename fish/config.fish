@@ -489,7 +489,7 @@ end
 # omf install https://github.com/jhillyerd/plugin-git
 alias undopush "git push -f origin HEAD^:master"
 alias add="git add -A"
-alias commit="git commit -m "updated""
+alias commit="git commit -m "Updated""
 alias push="git push"
 
 # Neovim
