@@ -491,6 +491,7 @@ alias undopush "git push -f origin HEAD^:master"
 alias add="git add -A"
 alias commit="git commit -m "Updated""
 alias push="git push"
+alias gtpush="add;commit;push"
 
 # Neovim
 alias vim="nvim"
