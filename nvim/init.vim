@@ -9,7 +9,8 @@
 
 call plug#begin()
 
-Plug 'Mofiqul/dracula.nvim'
+Plug 'windwp/nvim-autopairs' " Autocloses pais, eg. '', "", (), {}, []
+Plug 'Mofiqul/dracula.nvim' " Dracula theme for the gigachads out there
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
@@ -56,3 +57,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+lua << EOF
+require("nvim-autopairs").setup {}
+EOF
