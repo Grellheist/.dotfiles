@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
+    use('ap/vim-css-color')
+    use('tpope/vim-surround')
+    use('vim-airline/vim-airline')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -52,5 +55,5 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
+    
 end)
