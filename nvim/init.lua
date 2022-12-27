@@ -1,2 +1,2 @@
 require("grellheist.remap")
-print("oie")
+require("grellheist.set")
