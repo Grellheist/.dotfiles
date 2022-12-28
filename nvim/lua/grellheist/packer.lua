@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'Mofiqul/dracula.nvim',
-        as = 'dracula',
+        'folke/tokyonight.nvim',
+        as = 'tokyonight',
         config = function()
-            vim.cmd[[colorscheme dracula]]
+            vim.cmd[[colorscheme tokyonight]]
         end
     })
 
