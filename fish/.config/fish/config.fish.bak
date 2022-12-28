@@ -488,13 +488,6 @@ end
 # using plugin
 # omf install https://github.com/jhillyerd/plugin-git
 alias undopush "git push -f origin HEAD^:master"
-alias add="git add -A"
-alias commit="git commit -m "Updated""
-alias push="git push"
-alias gtpush="add;commit;push"
-
-# Neovim
-alias vim="nvim"
 
 # reporting tools - install when not installed
 #neofetch
