@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
     use('ap/vim-css-color')
     use('tpope/vim-surround')
     use('vim-airline/vim-airline')
+    use('vim-airline/vim-airline-themes')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
