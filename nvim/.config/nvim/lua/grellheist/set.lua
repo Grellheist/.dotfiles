@@ -1,8 +1,8 @@
-
+vim.g.vimtex_view_method = "zathura"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.g.airline_theme='base16_dracula'
+vim.g.airline_theme="base16_dracula"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
