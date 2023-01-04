@@ -1,3 +1,4 @@
+vim.g.vimtex_mappings_prefix = " "
 vim.g.vimtex_view_method = "zathura"
 vim.opt.nu = true
 vim.opt.relativenumber = true
