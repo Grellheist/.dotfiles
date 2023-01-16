@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'folke/tokyonight.nvim',
-        as = 'tokyonight',
+        'rebelot/kanagawa.nvim',
+        as = 'kanagawa',
         config = function()
-            vim.cmd[[colorscheme tokyonight]]
+            vim.cmd[[colorscheme kanagawa]]
         end
     })
 
