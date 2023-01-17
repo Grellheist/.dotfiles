@@ -60,4 +60,5 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use "tpope/vim-repeat"
     use "norcalli/nvim-colorizer.lua"
+    use "mg979/vim-visual-multi"
 end)
