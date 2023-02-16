@@ -61,4 +61,5 @@ return require('packer').startup(function(use)
     use "tpope/vim-repeat"
     use "norcalli/nvim-colorizer.lua"
     use "mg979/vim-visual-multi"
+    use "tpope/vim-dadbod"
 end)

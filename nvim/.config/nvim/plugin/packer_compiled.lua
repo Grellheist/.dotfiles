@@ -206,6 +206,11 @@ _G.packer_plugins = {
     path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-css-color",
     url = "https://github.com/ap/vim-css-color"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-repeat",
