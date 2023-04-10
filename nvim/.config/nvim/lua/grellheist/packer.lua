@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'catppuccin/nvim',
-        as = 'catppuccin',
+        'rebelot/kanagawa.nvim',
+        as = 'kanagawa',
         config = function()
-            vim.cmd[[colorscheme catppuccin]]
+            vim.cmd[[colorscheme kanagawa]]
         end
     })
 
