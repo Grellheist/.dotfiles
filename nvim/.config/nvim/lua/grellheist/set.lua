@@ -2,7 +2,7 @@ vim.g.vimtex_view_method = "zathura"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.g.airline_theme="violet"
+vim.g.airline_theme="catppuccin"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
