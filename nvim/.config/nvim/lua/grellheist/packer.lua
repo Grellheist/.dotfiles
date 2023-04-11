@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
-    use('ap/vim-css-color')
     use('tpope/vim-surround')
     use('vim-airline/vim-airline')
     use('vim-airline/vim-airline-themes')
@@ -58,7 +57,6 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use "tpope/vim-repeat"
     use "norcalli/nvim-colorizer.lua"
     use "mg979/vim-visual-multi"
     use "github/copilot.vim"

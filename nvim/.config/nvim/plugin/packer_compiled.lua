@@ -206,16 +206,6 @@ _G.packer_plugins = {
     path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
-  ["vim-css-color"] = {
-    loaded = true,
-    path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-css-color",
-    url = "https://github.com/ap/vim-css-color"
-  },
-  ["vim-repeat"] = {
-    loaded = true,
-    path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-repeat",
-    url = "https://github.com/tpope/vim-repeat"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/grellheist/.local/share/nvim/site/pack/packer/start/vim-surround",
