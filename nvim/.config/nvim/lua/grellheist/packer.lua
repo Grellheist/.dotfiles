@@ -61,14 +61,5 @@ return require('packer').startup(function(use)
     -- use "mg979/vim-visual-multi"
     use "github/copilot.vim"
     use "tpope/vim-commentary"
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
-        config = function()
-            require("nvim-tree").setup {}
-        end
-    }
     use "tpope/vim-fugitive"
 end)
