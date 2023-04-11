@@ -58,6 +58,15 @@ return require('packer').startup(function(use)
     }
     use "lukas-reineke/indent-blankline.nvim"
     use "norcalli/nvim-colorizer.lua"
-    use "mg979/vim-visual-multi"
+    -- use "mg979/vim-visual-multi"
     use "github/copilot.vim"
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
 end)
