@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use "norcalli/nvim-colorizer.lua"
     -- use "mg979/vim-visual-multi"
-    use "github/copilot.vim"
+    -- use "github/copilot.vim"
     use "tpope/vim-commentary"
     use "tpope/vim-fugitive"
 end)
