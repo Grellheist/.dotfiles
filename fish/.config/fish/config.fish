@@ -497,6 +497,12 @@ alias tbpush="git add -A;git commit -m 'To be implemented';git push"
 # Neovim
 alias vim="nvim"
 
+# Final Fantasy XIV
+alias ff="flatpak run dev.goats.xivlauncher"
+
+# League of Legends
+alias lol="leagueoflegends start"
+
 # reporting tools - install when not installed
 #neofetch
 #screenfetch
