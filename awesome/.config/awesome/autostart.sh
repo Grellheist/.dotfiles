@@ -34,4 +34,4 @@ run nitrogen --restore
 run discord
 #run telegram-desktop
 run flameshot
-run volumeicon
+run corectrl
