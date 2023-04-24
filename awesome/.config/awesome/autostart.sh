@@ -35,3 +35,4 @@ run discord
 #run telegram-desktop
 run flameshot
 run corectrl
+run steam
