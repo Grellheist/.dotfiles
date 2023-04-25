@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use "norcalli/nvim-colorizer.lua"
+    use "brenoprata10/nvim-highlight-colors"
     -- use "mg979/vim-visual-multi"
     -- use "github/copilot.vim"
     use "tpope/vim-commentary"
