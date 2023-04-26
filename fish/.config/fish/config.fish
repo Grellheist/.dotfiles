@@ -53,8 +53,8 @@ set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user
 #end
 
 # sets tools
-set -x EDITOR nano
-set -x VISUAL nano
+set -x EDITOR vim
+set -x VISUAL vim
 #set -x TERM alacritty
 # Sets the terminal type for proper colors
 set TERM "xterm-256color"
