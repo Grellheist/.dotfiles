@@ -15,7 +15,7 @@ run nm-applet
 #run caffeine
 run pamac-tray
 #run variety
-run xfce4-power-manager
+#run xfce4-power-manager
 run blueberry-tray
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run numlockx on
@@ -36,3 +36,6 @@ run discord
 run flameshot
 run corectrl
 run steam
+run brave
+run keepassxc
+run whatsapp-nativefier
