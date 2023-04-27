@@ -503,6 +503,9 @@ alias ff="flatpak run dev.goats.xivlauncher"
 # League of Legends
 alias lol="leagueoflegends start"
 
+# Mudfish
+alias mudfish="sudo /opt/mudfish/5.7.1/bin/mudrun"
+
 # reporting tools - install when not installed
 #neofetch
 #screenfetch
