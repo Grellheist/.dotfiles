@@ -39,3 +39,4 @@ run steam
 run brave
 run keepassxc
 run whatsapp-nativefier
+run syncthing
