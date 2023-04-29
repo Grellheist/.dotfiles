@@ -1,0 +1,9 @@
+[Unit]
+Description=Mudfish
+
+[Service]
+ExecStart=/opt/mudfish/5.7.1/bin/mudrun-headless
+
+[Install]
+WantedBy=multi-user.target
+
