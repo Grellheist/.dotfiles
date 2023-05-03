@@ -20,6 +20,13 @@ return require('packer').startup(function(use)
             vim.cmd [[colorscheme catppuccin]]
         end
     })
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
+    }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
