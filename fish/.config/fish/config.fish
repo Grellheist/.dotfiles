@@ -503,6 +503,9 @@ alias ff="flatpak run dev.goats.xivlauncher"
 # League of Legends
 alias lol="leagueoflegends start"
 
+# Create NextJS app 
+alias next="npx create-next-app@latest"
+
 # reporting tools - install when not installed
 #neofetch
 #screenfetch
