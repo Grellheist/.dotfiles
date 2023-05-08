@@ -70,4 +70,5 @@ return require('packer').startup(function(use)
     use "tpope/vim-commentary"
     use "tpope/vim-fugitive"
     use "ThePrimeagen/vim-be-good"
+    use "m4xshen/smartcolumn.nvim"
 end)
