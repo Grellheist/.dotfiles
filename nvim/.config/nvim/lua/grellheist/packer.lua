@@ -113,4 +113,11 @@ return require('packer').startup(function(use)
             require('crates').setup()
         end,
     }
+    use "tpope/vim-repeat"
+    use({
+        "ggandor/leap.nvim",
+        config = function()
+            require("leap").add_default_mappings()
+        end
+    })
 end)
