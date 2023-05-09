@@ -67,7 +67,7 @@ return require('packer').startup(function(use)
     -- use "mg979/vim-visual-multi"
     -- use "github/copilot.vim"
     use "tpope/vim-commentary"
-    use "tpope/vim-fugitive"
+    -- use "tpope/vim-fugitive"
     use "ThePrimeagen/vim-be-good"
     use({
         "kylechui/nvim-surround",
@@ -120,4 +120,5 @@ return require('packer').startup(function(use)
             require("leap").add_default_mappings()
         end
     })
+    use "kdheepak/lazygit.nvim"
 end)
