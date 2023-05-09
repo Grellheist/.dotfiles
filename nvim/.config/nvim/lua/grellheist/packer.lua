@@ -120,8 +120,4 @@ return require('packer').startup(function(use)
             require("leap").add_default_mappings()
         end
     })
-    use({
-        "aserowy/tmux.nvim",
-        config = function() return require("tmux").setup() end
-    })
 end)
