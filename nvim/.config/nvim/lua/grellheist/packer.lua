@@ -78,4 +78,10 @@ return require('packer').startup(function(use)
 			})
 		end
 	})
+	use({
+		"m4xshen/smartcolumn.nvim",
+		config = function ()
+			require("smartcolumn").setup()
+		end
+	})
 end)
