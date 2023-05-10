@@ -43,6 +43,13 @@ function reload
     echo "reloading: $config"
 end
 
+# Autostart tmux
+if status --is-login
+    if test -z "$TMUX"; and not pgrep -q tmux
+        tmux new-session
+    end
+end
+
 # User paths
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user_paths
