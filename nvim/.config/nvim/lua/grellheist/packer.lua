@@ -84,9 +84,6 @@ return require('packer').startup(function(use)
             require("smartcolumn").setup()
         end
     })
-    use { 'romgrk/barbar.nvim', requires = {
-        'lewis6991/gitsigns.nvim'
-    } }
     use({
         'yamatsum/nvim-cursorline',
         config = function()
