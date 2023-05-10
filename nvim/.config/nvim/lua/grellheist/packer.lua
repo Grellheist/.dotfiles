@@ -121,4 +121,5 @@ return require('packer').startup(function(use)
         end
     })
     use "kdheepak/lazygit.nvim"
+    use "christoomey/vim-tmux-navigator"
 end)

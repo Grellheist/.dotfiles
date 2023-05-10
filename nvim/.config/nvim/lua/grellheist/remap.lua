@@ -44,3 +44,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- vim.keymap.set("n", "<C-h>", "<nop>")
+-- vim.keymap.set("n", "<C-j>", "<nop>")
+-- vim.keymap.set("n", "<C-k>", "<nop>")
+-- vim.keymap.set("n", "<C-l>", "<nop>")
