@@ -35,8 +35,8 @@ run discord
 #run telegram-desktop
 run flameshot
 run corectrl
-run steam
-run brave
-run keepassxc
-run whatsapp-nativefier
+# run steam
+# run brave
+# run keepassxc
+# run whatsapp-nativefier
 run syncthing
