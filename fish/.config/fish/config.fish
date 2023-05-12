@@ -212,10 +212,10 @@ end
 #fix obvious typo's
 alias cd..="cd .."
 alias pdw="pwd"
-alias udpate="sudo pacman -Syyu"
-alias upate="sudo pacman -Syyu"
-alias updte="sudo pacman -Syyu"
-alias updqte="sudo pacman -Syyu"
+alias udpate="sudo paru -Syyu --noconfirm"
+alias upate="sudo paru -Syyu --noconfirm" 
+alias updte="sudo paru -Syyu --noconfirm"
+alias updqte="sudo paru -Syyu --noconfirm"
 alias upqll="paru -Syu --noconfirm"
 alias upal="paru -Syu --noconfirm"
 
