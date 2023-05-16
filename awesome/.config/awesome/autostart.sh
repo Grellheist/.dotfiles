@@ -39,4 +39,4 @@ run corectrl
 # run brave
 # run keepassxc
 # run whatsapp-nativefier
-# run syncthing
+run syncthing
