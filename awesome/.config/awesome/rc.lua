@@ -313,7 +313,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "w", function() awful.util.spawn(browser1) end,
         { description = browser1, group = "function keys" }),
     -- dmenu
-    awful.key({ modkey }, "space",
+    awful.key({ modkey, "Shift" }, "space",
         function()
             awful.spawn(string.format(
                 "dmenu_run -i -nb '#191919' -nf '#BABBF1' -sb '#BABBF1' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
@@ -660,8 +660,8 @@ globalkeys = my_table.join(
         { description = "increase the number of columns", group = "layout" }),
     awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
         { description = "decrease the number of columns", group = "layout" }),
-    awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
-        { description = "select next", group = "layout" }),
+    -- awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
+    --     { description = "select next", group = "layout" }),
     --awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
     -- {description = "select previous", group = "layout"}),
 
