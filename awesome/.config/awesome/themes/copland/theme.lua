@@ -17,18 +17,18 @@ local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/copland"
 theme.wallpaper                                 = theme.dir .. "/wall.jpeg"
 theme.font                                      = "Terminus 14"
-theme.fg_normal                                 = "#BBBBBB"
-theme.fg_focus                                  = "#78A4FF"
-theme.bg_normal                                 = "#111111"
-theme.bg_focus                                  = "#111111"
-theme.fg_urgent                                 = "#000000"
+theme.fg_normal                                 = "#C6D0F5"
+theme.fg_focus                                  = "#EF9F76"
+theme.bg_normal                                 = "#232634"
+theme.bg_focus                                  = "#303446"
+theme.fg_urgent                                 = "#303446"
 theme.bg_urgent                                 = "#FFFFFF"
 theme.border_width                              = dpi(2)
 theme.border_normal                             = "#141414"
 theme.border_focus                              = "#60a2d4"
-theme.taglist_fg_focus                          = "#FFFFFF"
-theme.taglist_bg_focus                          = "#111111"
-theme.taglist_bg_normal                         = "#111111"
+theme.taglist_fg_focus                          = "#EF9F76"
+theme.taglist_bg_focus                          = "#303446"
+theme.taglist_bg_normal                         = "#232634"
 theme.titlebar_bg_normal                        = "#191919"
 theme.titlebar_bg_focus                         = "#262626"
 theme.menu_height                               = dpi(16)
@@ -92,8 +92,8 @@ theme.layout_centerwork                         = theme.dir .. "/icons/centerwor
 
 local markup                                    = lain.util.markup
 local blue                                      = theme.fg_focus
-local red                                       = "#EB8F8F"
-local green                                     = "#8FEB8F"
+local red                                       = "#E78284"
+local green                                     = "#A6D189"
 
 -- Textclock
 --os.setlocale(os.getenv("LANG")) -- to localize the clock
@@ -159,7 +159,7 @@ theme.mpd = lain.widget.mpd({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#06d6a0", mem_now.used .. "MB "))
+        widget:set_markup(markup.fontfg(theme.font, "#A6D189", mem_now.used .. "MB "))
     end
 })
 
@@ -167,14 +167,14 @@ local mem = lain.widget.mem({
 local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
 local cpu = lain.widget.cpu({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#3a86ff", cpu_now.usage .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, "#8CAAEE", cpu_now.usage .. "% "))
     end
 })
 
 -- Temps
 local temp = lain.widget.temp({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#ef233c", coretemp_now .. "°C "))
+        widget:set_markup(markup.fontfg(theme.font, "#E78284", coretemp_now .. "°C "))
     end
 })
 
