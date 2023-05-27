@@ -313,7 +313,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "w", function() awful.util.spawn(browser1) end,
         { description = browser1, group = "function keys" }),
     -- dmenu
-    awful.key({ modkey }, "d",
+    awful.key({ modkey }, "space",
         function()
             awful.spawn(string.format(
                 "dmenu_run -i -nb '#191919' -nf '#BABBF1' -sb '#BABBF1' -sf '#191919' -fn NotoMonoRegular:bold:pixelsize=14",
