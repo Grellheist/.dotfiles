@@ -1,8 +1,8 @@
 #!/bin/sh
 
-wall=$(find ~/Pictures/Wallpapers -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
-swww img $wall
+wall=$(find ~/Pictures/Wallpapers -type f -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" | shuf -n 1)
+
+xwallpaper --zoom $wall
 wal -c
 wal -i $wall
 
-xdotool key super+F5

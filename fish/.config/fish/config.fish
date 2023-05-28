@@ -516,6 +516,9 @@ alias next="npx create-next-app@latest"
 # Tmux
 alias ta="tmux new-session -A -s main"
 
+# Pywal script
+alias wal="~/.local/bin/pywal.sh"
+
 # reporting tools - install when not installed
 #neofetch
 #screenfetch

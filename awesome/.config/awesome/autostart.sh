@@ -19,6 +19,7 @@ run pamac-tray
 run blueberry-tray
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run numlockx on
+run ~/.local/bin/pywal.sh
 # run nitrogen --restore
 #run conky -c $HOME/.config/awesome/system-overview
 #you can set wallpapers in themes as well
