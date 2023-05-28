@@ -13,13 +13,13 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    -- use({
-    --     'catppuccin/nvim',
-    --     as = 'catppuccin',
-    --     config = function()
-    --         vim.cmd [[colorscheme catppuccin]]
-    --     end
-    -- })
+    use({
+        'catppuccin/nvim',
+        as = 'catppuccin',
+        config = function()
+            vim.cmd [[colorscheme catppuccin]]
+        end
+    })
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
@@ -122,11 +122,11 @@ return require('packer').startup(function(use)
     })
     use "kdheepak/lazygit.nvim"
     use "christoomey/vim-tmux-navigator"
-    use({
-        "uZer/pywal16.nvim",
-        as = "pywal16",
-        config = function()
-            require("pywal16").setup()
-        end
-    })
+    -- use({
+    --     "uZer/pywal16.nvim",
+    --     as = "pywal16",
+    --     config = function()
+    --         require("pywal16").setup()
+    --     end
+    -- })
 end)

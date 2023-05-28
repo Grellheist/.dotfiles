@@ -513,6 +513,9 @@ alias lol="leagueoflegends start"
 # Create NextJS app 
 alias next="npx create-next-app@latest"
 
+# Tmux
+alias ta="tmux new-session -A -s main"
+
 # reporting tools - install when not installed
 #neofetch
 #screenfetch
