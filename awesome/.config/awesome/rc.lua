@@ -108,10 +108,10 @@ local themes = {
 }
 
 -- choose your theme here
-local chosen_theme = themes[2]
+ local chosen_theme = themes[2]
 
-local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
-beautiful.init(theme_path)
+ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
+ beautiful.init(theme_path)
 
 -- modkey or mod4 = super key
 local modkey                           = "Mod4"
@@ -318,6 +318,11 @@ globalkeys = my_table.join(
                 awful.spawn.with_shell("~/.local/bin/dmenu.sh")
         end,
         { description = "show dmenu", group = "hotkeys" }),
+    awful.key({ modkey }, "p",
+        function()
+                awful.spawn.with_shell("~/.local/bin/pywal.sh")
+        end,
+        { description = "change wallpaper w/ pywal", group = "hotkeys" }),
 
     -- Function keys
 
