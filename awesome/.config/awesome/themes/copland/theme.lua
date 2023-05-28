@@ -24,7 +24,7 @@ theme.fg_focus                                  = xrdb.background
 theme.bg_normal                                 = xrdb.background
 theme.bg_focus                                  = xrdb.color1
 theme.fg_urgent                                 = xrdb.background
-theme.bg_urgent                                 = xrdb.color14
+theme.bg_urgent                                 = xrdb.color1
 theme.border_width                              = dpi(2)
 theme.border_normal                             = xrdb.background
 theme.border_focus                              = xrdb.color1
@@ -227,7 +227,7 @@ local batupd = lain.widget.bat({
         batbar:set_value(bat_now.perc / 100)
     end
 })
-local batbg = wibox.container.background(batbar, "#474747", gears.shape.rectangle)
+local batbg = wibox.container.background(batbar, xrdb.color1, gears.shape.rectangle)
 local batwidget = wibox.container.margin(batbg, dpi(2), dpi(7), dpi(4), dpi(4))
 
 -- /home fs
@@ -373,9 +373,7 @@ function theme.at_screen_connect(s)
             -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             small_spr,
-            s.mylayoutbox,
             first,
-            bar_spr,
             s.mytaglist,
             first,
             s.mypromptbox,
