@@ -3,7 +3,7 @@ local frappe = require("catppuccin.palettes").get_palette "frappe"
 local macchiato = require("catppuccin.palettes").get_palette "macchiato"
 local mocha = require("catppuccin.palettes").get_palette "mocha"
 
-vim.g.catppuccin_flavour = "macchiato"                      -- Has to be set in order for empty argument to work
+vim.g.catppuccin_flavour = "mocha"                      -- Has to be set in order for empty argument to work
 local colors = require("catppuccin.palettes").get_palette() -- g:catppuccin_flavour's palette
 colors.none = "NONE"
 require("catppuccin").setup {
@@ -16,5 +16,9 @@ require("catppuccin").setup {
         DiagnosticVirtualTextWarn = { bg = colors.none },
         DiagnosticVirtualTextInfo = { bg = colors.none },
         DiagnosticVirtualTextHint = { bg = colors.none },
-    }
+    },
+    transparent_background = true,
+    integrations = {
+        telescope = true
+    },
 }
