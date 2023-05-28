@@ -527,9 +527,17 @@ alias next="npx create-next-app@latest"
 #sysinfo
 #sysinfo-retro
 #cpufetch
-colorscript random
 
 # colors to set or unset
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# begin
+#     cat ~/.cache/wal/sequences
+#     clear
+# end &
+colorscript random
 
 set fish_color_autosuggestion "#969896"
 set fish_color_cancel -r

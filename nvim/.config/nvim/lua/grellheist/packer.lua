@@ -13,13 +13,13 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'catppuccin/nvim',
-        as = 'catppuccin',
-        config = function()
-            vim.cmd [[colorscheme catppuccin]]
-        end
-    })
+    -- use({
+    --     'catppuccin/nvim',
+    --     as = 'catppuccin',
+    --     config = function()
+    --         vim.cmd [[colorscheme catppuccin]]
+    --     end
+    -- })
     use {
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
@@ -32,8 +32,12 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
-    use('vim-airline/vim-airline')
-    use('vim-airline/vim-airline-themes')
+    -- use('vim-airline/vim-airline')
+    -- use('vim-airline/vim-airline-themes')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     use('lervag/vimtex')
 
     use {
@@ -71,10 +75,9 @@ return require('packer').startup(function(use)
     use "ThePrimeagen/vim-be-good"
     use({
         "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        tag = "*",
         config = function()
             require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
             })
         end
     })
@@ -119,4 +122,11 @@ return require('packer').startup(function(use)
     })
     use "kdheepak/lazygit.nvim"
     use "christoomey/vim-tmux-navigator"
+    use({
+        "uZer/pywal16.nvim",
+        as = "pywal16",
+        config = function()
+            require("pywal16").setup()
+        end
+    })
 end)
