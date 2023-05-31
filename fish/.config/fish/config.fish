@@ -546,7 +546,8 @@ alias dmenu="~/.local/bin/dmenu.sh"
 #     cat ~/.cache/wal/sequences
 #     clear
 # end &
-colorscript random
+
+colorscript random 
 
 set fish_color_autosuggestion "#969896"
 set fish_color_cancel -r
