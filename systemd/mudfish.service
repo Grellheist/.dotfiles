@@ -2,7 +2,7 @@
 Description=Mudfish
 
 [Service]
-ExecStart=/opt/mudfish/5.7.1/bin/mudrun-headless
+ExecStart=/opt/mudfish/5.7.3/bin/mudrun-headless
 
 [Install]
 WantedBy=multi-user.target
