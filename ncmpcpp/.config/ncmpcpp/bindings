@@ -396,17 +396,17 @@ def_key "Z"
 #def_key "ctrl-_"
 #  select_found_items
 #
-def_key "/"
-  find
-#
 #def_key "/"
-#  find_item_forward
+#  find
+#
+def_key "/"
+  find_item_forward
 #
 #def_key "?"
 #  find
 #
-#def_key "?"
-#  find_item_backward
+def_key "?"
+  find_item_backward
 #
 #def_key "."
 #  next_found_item
