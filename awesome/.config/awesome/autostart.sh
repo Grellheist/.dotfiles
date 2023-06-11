@@ -6,7 +6,7 @@ function run {
     $@&
   fi
 }
-run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+#run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 run xrandr --output DisplayPort-2 --primary  --mode 1920x1080 --output HDMI-A-0 --mode 1920x1080 --left-of DisplayPort-2
 #run xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
 #run xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
