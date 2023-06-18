@@ -5,12 +5,11 @@ set -x
 # Stop display manager
 systemctl stop display-manager.service
 systemctl stop sddm.service
-pulse_pid=$(pgrep -u grellheist pulseaudio)
 pipewire_pid=$(pgrep -u grellheist pipewire-media)
-kill $pulse_pid
 kill $pipewire_pid
 ## Uncomment the following line if you use GDM
 #killall gdm-x-session
+killall corectrl
 
 # Unbind VTconsoles
 echo 0 > /sys/class/vtconsole/vtcon0/bind
