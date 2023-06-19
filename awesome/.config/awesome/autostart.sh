@@ -7,7 +7,7 @@ function run {
   fi
 }
 #run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
-run xrandr --output DisplayPort-2 --primary  --mode 1920x1080 --output HDMI-A-0 --mode 1920x1080 --left-of DisplayPort-2
+#run xrandr --output DisplayPort-2 --primary  --mode 1920x1080 --output HDMI-A-0 --mode 1920x1080 --left-of DisplayPort-2
 #run xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
 #run xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
@@ -19,7 +19,6 @@ run pamac-tray
 run blueberry-tray
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 run numlockx on
-run wal -R
 # run nitrogen --restore
 #run conky -c $HOME/.config/awesome/system-overview
 #you can set wallpapers in themes as well
@@ -33,6 +32,7 @@ run wal -R
 #run spotify
 #run ckb-next -b
 run discord
+run wal -R
 #run telegram-desktop
 run flameshot
 run corectrl
