@@ -31,6 +31,7 @@ run numlockx on
 #run insync start
 #run spotify
 #run ckb-next -b
+run alttab
 run discord
 run wal -R
 #run telegram-desktop
