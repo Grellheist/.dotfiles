@@ -122,11 +122,4 @@ return require('packer').startup(function(use)
     })
     use "kdheepak/lazygit.nvim"
     use "christoomey/vim-tmux-navigator"
-    -- use({
-    --     "uZer/pywal16.nvim",
-    --     as = "pywal16",
-    --     config = function()
-    --         require("pywal16").setup()
-    --     end
-    -- })
 end)
