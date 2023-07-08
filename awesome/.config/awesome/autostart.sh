@@ -42,3 +42,4 @@ run corectrl
 # run keepassxc
 # run whatsapp-nativefier
 run syncthing
+run anki
