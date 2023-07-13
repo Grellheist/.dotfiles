@@ -575,3 +575,5 @@ set fish_pager_color_prefix normal --bold underline
 set fish_pager_color_prefix white --bold --underline
 set fish_pager_color_progress brwhite --background=cyan
 set fish_color_search_match --background="#60AEFF"
+
+export PATH="/home/grellheist/.cargo/bin:$PATH"
