@@ -16,23 +16,22 @@ local my_table                                  = awful.util.table or gears.tabl
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/copland"
-local colors                                    = os.getenv("HOME") .. "/.cache/wal/colors.sh"
-theme.wallpaper                                 = theme.dir .. "/wall.jpg"
+theme.wallpaper                                 = theme.dir .. "/wall.jpeg"
 theme.font                                      = "Terminus 14"
-theme.fg_normal                                 = xrdb.foreground
-theme.fg_focus                                  = xrdb.background
-theme.bg_normal                                 = xrdb.background
-theme.bg_focus                                  = xrdb.color1
-theme.fg_urgent                                 = xrdb.background
-theme.bg_urgent                                 = xrdb.color1
+theme.fg_normal                                 = "#C6D0F5"
+theme.fg_focus                                  = "#EF9F76"
+theme.bg_normal                                 = "#232634"
+theme.bg_focus                                  = "#303446"
+theme.fg_urgent                                 = "#303446"
+theme.bg_urgent                                 = "#FFFFFF"
 theme.border_width                              = dpi(2)
-theme.border_normal                             = xrdb.background
-theme.border_focus                              = xrdb.color1
-theme.taglist_fg_focus                          = xrdb.color1
-theme.taglist_bg_focus                          = xrdb.background
-theme.taglist_bg_normal                         = xrdb.background
-theme.titlebar_bg_normal                        = xrdb.background
-theme.titlebar_bg_focus                         = xrdb.background
+theme.border_normal                             = "#141414"
+theme.border_focus                              = "#60a2d4"
+theme.taglist_fg_focus                          = "#EF9F76"
+theme.taglist_bg_focus                          = "#303446"
+theme.taglist_bg_normal                         = "#232634"
+theme.titlebar_bg_normal                        = "#191919"
+theme.titlebar_bg_focus                         = "#262626"
 theme.menu_height                               = dpi(16)
 theme.menu_width                                = dpi(130)
 theme.tasklist_disable_icon                     = true
@@ -281,31 +280,6 @@ theme.volume = lain.widget.alsabar {
         unmute     = theme.fg_normal
     }
 }
-theme.volume.tooltip.wibox.fg = theme.fg_focus
-theme.volume.bar:buttons(my_table.join(
-    awful.button({}, 1, function()
-        awful.spawn(string.format("%s -e alsamixer", awful.util.terminal))
-    end),
-    awful.button({}, 2, function()
-        os.execute(string.format("%s set %s 100%%", theme.volume.cmd, theme.volume.channel))
-        theme.volume.update()
-    end),
-    awful.button({}, 3, function()
-        os.execute(string.format("%s set %s toggle", theme.volume.cmd, theme.volume.togglechannel or theme.volume
-            .channel))
-        theme.volume.update()
-    end),
-    awful.button({}, 4, function()
-        os.execute(string.format("%s set %s 1%%+", theme.volume.cmd, theme.volume.channel))
-        theme.volume.update()
-    end),
-    awful.button({}, 5, function()
-        os.execute(string.format("%s set %s 1%%-", theme.volume.cmd, theme.volume.channel))
-        theme.volume.update()
-    end)
-))
-local volumebg = wibox.container.background(theme.volume.bar, "#474747", gears.shape.rectangle)
-local volumewidget = wibox.container.margin(volumebg, dpi(2), dpi(7), dpi(4), dpi(4))
 
 -- Weather
 --[[ to be set before use
@@ -399,9 +373,6 @@ function theme.at_screen_connect(s)
             cpu.widget,
             tempicon,
             temp.widget,
-            bar_spr,
-            volicon,
-            volumewidget,
             bar_spr,
             mytextclock,
         },
