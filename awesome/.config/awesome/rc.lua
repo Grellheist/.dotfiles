@@ -312,17 +312,17 @@ globalkeys = my_table.join(
 -- {{{ Personal keybindings
     awful.key({ modkey }, "w", function() awful.util.spawn(browser1) end,
         { description = browser1, group = "function keys" }),
-    -- dmenu
+    -- rofi
     awful.key({ modkey }, "space",
         function()
-                awful.spawn.with_shell("~/.local/bin/dmenu.sh")
+                awful.util.spawn("rofi -show run")
         end,
-        { description = "show dmenu", group = "hotkeys" }),
-    awful.key({ modkey }, "p",
-        function()
-                awful.spawn.with_shell("~/.local/bin/pywal.sh")
-        end,
-        { description = "change wallpaper w/ pywal", group = "hotkeys" }),
+        { description = "show rofi", group = "hotkeys" }),
+    -- awful.key({ modkey }, "p",
+    --     function()
+    --             awful.spawn.with_shell("~/.local/bin/pywal.sh")
+    --     end,
+    --     { description = "change wallpaper w/ pywal", group = "hotkeys" }),
 
     -- Function keys
 
@@ -386,8 +386,8 @@ globalkeys = my_table.join(
     -- ctrl+alt +  ...
     -- awful.key({ modkey1, altkey }, "w", function() awful.util.spawn("arcolinux-welcome-app") end,
     --     { description = "ArcoLinux Welcome App", group = "alt+ctrl" }),
-    awful.key({ modkey1, altkey }, "e", function() awful.util.spawn("archlinux-tweak-tool") end,
-        { description = "ArcoLinux Tweak Tool", group = "alt+ctrl" }),
+    -- awful.key({ modkey1, altkey }, "e", function() awful.util.spawn("archlinux-tweak-tool") end,
+    --     { description = "ArcoLinux Tweak Tool", group = "alt+ctrl" }),
     -- awful.key({ modkey1, altkey }, "Next", function() awful.util.spawn("conky-rotate -n") end,
     --     { description = "Next conky rotation", group = "alt+ctrl" }),
     -- awful.key({ modkey1, altkey }, "Prior", function() awful.util.spawn("conky-rotate -p") end,
@@ -427,47 +427,47 @@ globalkeys = my_table.join(
     --     { description = "Pamac Manager", group = "alt+ctrl" }),
 
     -- alt + ...
-    awful.key({ altkey, "Shift" }, "t",
-        function()
-            awful.spawn.with_shell(
-                "variety -t  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
-        end,
-        { description = "Pywal Wallpaper trash", group = "altkey" }),
-    awful.key({ altkey, "Shift" }, "n",
-        function()
-            awful.spawn.with_shell(
-                "variety -n  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
-        end,
-        { description = "Pywal Wallpaper next", group = "altkey" }),
-    awful.key({ altkey, "Shift" }, "u",
-        function() awful.spawn.with_shell("wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end,
-        { description = "Pywal Wallpaper update", group = "altkey" }),
-    awful.key({ altkey, "Shift" }, "p",
-        function()
-            awful.spawn.with_shell(
-                "variety -p  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
-        end,
-        { description = "Pywal Wallpaper previous", group = "altkey" }),
-    awful.key({ altkey }, "t", function() awful.util.spawn("variety -t") end,
-        { description = "Wallpaper trash", group = "altkey" }),
-    awful.key({ altkey }, "n", function() awful.util.spawn("variety -n") end,
-        { description = "Wallpaper next", group = "altkey" }),
-    awful.key({ altkey }, "p", function() awful.util.spawn("variety -p") end,
-        { description = "Wallpaper previous", group = "altkey" }),
-    awful.key({ altkey }, "f", function() awful.util.spawn("variety -f") end,
-        { description = "Wallpaper favorite", group = "altkey" }),
-    awful.key({ altkey }, "Left", function() awful.util.spawn("variety -p") end,
-        { description = "Wallpaper previous", group = "altkey" }),
-    awful.key({ altkey }, "Right", function() awful.util.spawn("variety -n") end,
-        { description = "Wallpaper next", group = "altkey" }),
-    awful.key({ altkey }, "Up", function() awful.util.spawn("variety --pause") end,
-        { description = "Wallpaper pause", group = "altkey" }),
-    awful.key({ altkey }, "Down", function() awful.util.spawn("variety --resume") end,
-        { description = "Wallpaper resume", group = "altkey" }),
-    awful.key({ altkey }, "F2", function() awful.util.spawn("xfce4-appfinder --collapsed") end,
-        { description = "Xfce appfinder", group = "altkey" }),
-    awful.key({ altkey }, "F3", function() awful.util.spawn("xfce4-appfinder") end,
-        { description = "Xfce appfinder", group = "altkey" }),
+    -- awful.key({ altkey, "Shift" }, "t",
+    --     function()
+    --         awful.spawn.with_shell(
+    --             "variety -t  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
+    --     end,
+    --     { description = "Pywal Wallpaper trash", group = "altkey" }),
+    -- awful.key({ altkey, "Shift" }, "n",
+    --     function()
+    --         awful.spawn.with_shell(
+    --             "variety -n  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
+    --     end,
+    --     { description = "Pywal Wallpaper next", group = "altkey" }),
+    -- awful.key({ altkey, "Shift" }, "u",
+    --     function() awful.spawn.with_shell("wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end,
+    --     { description = "Pywal Wallpaper update", group = "altkey" }),
+    -- awful.key({ altkey, "Shift" }, "p",
+    --     function()
+    --         awful.spawn.with_shell(
+    --             "variety -p  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
+    --     end,
+    --     { description = "Pywal Wallpaper previous", group = "altkey" }),
+    -- awful.key({ altkey }, "t", function() awful.util.spawn("variety -t") end,
+    --     { description = "Wallpaper trash", group = "altkey" }),
+    -- awful.key({ altkey }, "n", function() awful.util.spawn("variety -n") end,
+    --     { description = "Wallpaper next", group = "altkey" }),
+    -- awful.key({ altkey }, "p", function() awful.util.spawn("variety -p") end,
+    --     { description = "Wallpaper previous", group = "altkey" }),
+    -- awful.key({ altkey }, "f", function() awful.util.spawn("variety -f") end,
+    --     { description = "Wallpaper favorite", group = "altkey" }),
+    -- awful.key({ altkey }, "Left", function() awful.util.spawn("variety -p") end,
+    --     { description = "Wallpaper previous", group = "altkey" }),
+    -- awful.key({ altkey }, "Right", function() awful.util.spawn("variety -n") end,
+    --     { description = "Wallpaper next", group = "altkey" }),
+    -- awful.key({ altkey }, "Up", function() awful.util.spawn("variety --pause") end,
+    --     { description = "Wallpaper pause", group = "altkey" }),
+    -- awful.key({ altkey }, "Down", function() awful.util.spawn("variety --resume") end,
+    --     { description = "Wallpaper resume", group = "altkey" }),
+    -- awful.key({ altkey }, "F2", function() awful.util.spawn("xfce4-appfinder --collapsed") end,
+    --     { description = "Xfce appfinder", group = "altkey" }),
+    -- awful.key({ altkey }, "F3", function() awful.util.spawn("xfce4-appfinder") end,
+    --     { description = "Xfce appfinder", group = "altkey" }),
     -- awful.key({ altkey }, "F5", function () awful.spawn.with_shell( "xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv" ) end,
     --    {description = "Xlunch app launcher", group = "altkey"}),
 
@@ -484,8 +484,8 @@ globalkeys = my_table.join(
 
     -- Hotkeys Awesome
 
-    awful.key({ modkey, }, "s", hotkeys_popup.show_help,
-        { description = "show help", group = "awesome" }),
+    -- awful.key({ modkey, }, "s", hotkeys_popup.show_help,
+    --     { description = "show help", group = "awesome" }),
 
     -- Tag browsing with modkey
     awful.key({ modkey, }, "Left", awful.tag.viewprev,
@@ -502,10 +502,10 @@ globalkeys = my_table.join(
     --     { description = "view previous", group = "tag" }),
 
     -- Tag browsing modkey + tab
-    awful.key({ modkey, }, "Tab", awful.tag.viewnext,
-        { description = "view next", group = "tag" }),
-    awful.key({ modkey, }, "Shift", awful.tag.viewprev,
-        { description = "view previous", group = "tag" }),
+    -- awful.key({ modkey, }, "Tab", awful.tag.viewnext,
+    --     { description = "view next", group = "tag" }),
+    -- awful.key({ modkey, }, "Shift", awful.tag.viewprev,
+    --     { description = "view previous", group = "tag" }),
 
 
     -- Non-empty tag browsing
@@ -1205,4 +1205,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("~/.config/awesome/autostart.sh")
-awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
+-- awful.spawn.with_shell("picom -b --config  $HOME/.config/awesome/picom.conf")
