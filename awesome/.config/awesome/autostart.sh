@@ -18,7 +18,7 @@ run pamac-tray
 #run xfce4-power-manager
 run blueberry-tray
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-run numlockx on
+# run numlockx on
 # run nitrogen --restore
 #run conky -c $HOME/.config/awesome/system-overview
 #you can set wallpapers in themes as well
@@ -31,9 +31,9 @@ run numlockx on
 #run insync start
 #run spotify
 #run ckb-next -b
-run alttab
+# run alttab
 run discord
-run wal -R
+# run wal -R
 #run telegram-desktop
 run flameshot
 run corectrl
@@ -42,4 +42,5 @@ run corectrl
 # run keepassxc
 # run whatsapp-nativefier
 run syncthing
-run anki
+# run anki
+run firefox
