@@ -315,7 +315,7 @@ globalkeys = my_table.join(
     -- rofi
     awful.key({ modkey }, "space",
         function()
-                awful.util.spawn("rofi -show run")
+                awful.spawn.with_shell("~/.config/rofi/launchers/type-1/launcher.sh")
         end,
         { description = "show rofi", group = "hotkeys" }),
     -- awful.key({ modkey }, "p",
@@ -373,7 +373,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
         { description = "exit", group = "hotkeys" }),
     awful.key({ modkey }, "Escape", function() awful.util.spawn("xkill") end,
-        { description = "Kill proces", group = "hotkeys" }),
+        { description = "Kill process", group = "hotkeys" }),
 
     -- super + shift + ...
     awful.key({ modkey, }, "e", function() awful.util.spawn(filemanager) end),
