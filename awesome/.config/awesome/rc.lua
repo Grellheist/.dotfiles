@@ -165,6 +165,14 @@ awful.layout.layouts                   = {
     --lain.layout.termfair.center,
 }
 
+naughty.config.defaults.ontop = true
+naughty.config.defaults.screen = awful.screen.focused()
+naughty.config.defaults.timeout = 4
+naughty.config.defaults.title = "Notification"
+naughty.config.defaults.position = "top_right"
+naughty.config.defaults.border_width = 0
+beautiful.notification_spacing = 16
+
 awful.util.taglist_buttons             = my_table.join(
     awful.button({}, 1, function(t) t:view_only() end),
     awful.button({ modkey }, 1, function(t)
@@ -370,7 +378,7 @@ globalkeys = my_table.join(
         { description = "pulseaudio control", group = "super" }),
     --awful.key({ modkey }, "u", function () awful.screen.focused().mypromptbox:run() end,
     --{description = "run prompt", group = "super"}),
-    awful.key({ modkey }, "x", function() awful.util.spawn("archlinux-logout") end,
+    awful.key({ modkey }, "x", function() awful.spawn.with_shell("~/.config/rofi/powermenu/type-6/powermenu.sh") end,
         { description = "exit", group = "hotkeys" }),
     awful.key({ modkey }, "Escape", function() awful.util.spawn("xkill") end,
         { description = "Kill process", group = "hotkeys" }),
