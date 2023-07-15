@@ -1,20 +1,3 @@
-###
-# https://fishshell.com/docs/current/index.html
-# https://github.com/jorgebucaran/cookbook.fish
-
-# themes
-# https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md
-
-# Plugins
-# https://github.com/jethrokuan/fzf
-# https://github.com/IlanCosman/tide.git - fisher install IlanCosman/tide@v5
-# https://github.com/jhillyerd/plugin-git
-
-# tools
-# https://github.com/jorgebucaran/fisher
-# https://github.com/oh-my-fish/oh-my-fish
-# https://github.com/danhper/fundle
-
 #set VIRTUAL_ENV_DISABLE_PROMPT "1"
 
 if not status --is-interactive
@@ -578,3 +561,6 @@ set fish_color_search_match --background="#60AEFF"
 
 export PATH="/home/grellheist/.cargo/bin:$PATH"
 starship init fish | source
+export VISUAL="nvim"
+export EDITOR="nvim"
+export TERMINAL="kitty"
