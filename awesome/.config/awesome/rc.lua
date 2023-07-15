@@ -165,13 +165,13 @@ awful.layout.layouts                   = {
     --lain.layout.termfair.center,
 }
 
--- naughty.config.defaults.ontop = true
--- naughty.config.defaults.screen = awful.screen.focused()
--- naughty.config.defaults.timeout = 4
--- naughty.config.defaults.title = "Notification"
--- naughty.config.defaults.position = "top_right"
--- naughty.config.defaults.border_width = 0
--- beautiful.notification_spacing = 16
+naughty.config.defaults.ontop = true
+naughty.config.defaults.screen = awful.screen.focused()
+naughty.config.defaults.timeout = 4
+naughty.config.defaults.title = "Notification"
+naughty.config.defaults.position = "top_right"
+naughty.config.defaults.border_width = 0
+beautiful.notification_spacing = 16
 
 awful.util.taglist_buttons             = my_table.join(
     awful.button({}, 1, function(t) t:view_only() end),
