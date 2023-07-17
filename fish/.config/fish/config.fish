@@ -564,3 +564,4 @@ starship init fish | source
 export VISUAL="nvim"
 export EDITOR="nvim"
 export TERMINAL="kitty"
+export SHELL="/bin/fish"
