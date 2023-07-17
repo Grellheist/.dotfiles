@@ -503,7 +503,7 @@ alias ta="tmux new-session -A -s main"
 alias dmenu="~/.local/bin/dmenu.sh"
 
 # Neofetch
-alias neofetch="neofetch --source ~/.config/neofetch/images/catgirl.jpg"
+alias neofetch="neofetch --backend kitty --source ~/.config/neofetch/images/catgirl.jpg"
 
 # reporting tools - install when not installed
 #neofetch
