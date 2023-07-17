@@ -17,3 +17,4 @@ run corectrl
 run syncthing
 # run anki
 run firefox
+run clipmenud
