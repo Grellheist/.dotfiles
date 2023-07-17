@@ -1,4 +1,4 @@
-# dot-files
+# dotfiles
 
 This repository contains all my dotfiles for linux configurations!
 
