@@ -8,7 +8,7 @@ require('telescope').setup {
     },
     defaults = {
         file_ignore_patterns = {
-            "node_modules", "build", "dist"
+            "node_modules", "build", "dist", ".git"
         }
     }
 }
