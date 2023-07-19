@@ -740,10 +740,10 @@ globalkeys = my_table.join(
     --awful.key({}, "XF86AudioStop", function() awful.util.spawn("playerctl stop", false) end),
 
     --Media keys supported by mpd.
-    awful.key({}, "XF86AudioPlay", function() awful.util.spawn("mpc toggle") end),
-    awful.key({}, "XF86AudioNext", function() awful.util.spawn("mpc next") end),
-    awful.key({}, "XF86AudioPrev", function() awful.util.spawn("mpc prev") end),
-    awful.key({}, "XF86AudioStop", function() awful.util.spawn("mpc stop") end),
+    -- awful.key({}, "XF86AudioPlay", function() awful.util.spawn("mpc toggle") end),
+    -- awful.key({}, "XF86AudioNext", function() awful.util.spawn("mpc next") end),
+    -- awful.key({}, "XF86AudioPrev", function() awful.util.spawn("mpc prev") end),
+    -- awful.key({}, "XF86AudioStop", function() awful.util.spawn("mpc stop") end),
 
     -- MPD control
     -- awful.key({ modkey1, "Shift" }, "Up",
