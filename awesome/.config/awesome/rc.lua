@@ -108,10 +108,10 @@ local themes = {
 }
 
 -- choose your theme here
- local chosen_theme = themes[2]
+local chosen_theme = themes[2]
 
- local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
- beautiful.init(theme_path)
+local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme)
+beautiful.init(theme_path)
 
 -- modkey or mod4 = super key
 local modkey                           = "Mod4"
@@ -165,13 +165,13 @@ awful.layout.layouts                   = {
     --lain.layout.termfair.center,
 }
 
-naughty.config.defaults.ontop = true
-naughty.config.defaults.screen = awful.screen.focused()
-naughty.config.defaults.timeout = 4
-naughty.config.defaults.title = "Notification"
-naughty.config.defaults.position = "top_right"
-naughty.config.defaults.border_width = 0
-beautiful.notification_spacing = 16
+naughty.config.defaults.ontop          = true
+naughty.config.defaults.screen         = awful.screen.focused()
+naughty.config.defaults.timeout        = 4
+naughty.config.defaults.title          = "Notification"
+naughty.config.defaults.position       = "top_right"
+naughty.config.defaults.border_width   = 0
+beautiful.notification_spacing         = 16
 
 awful.util.taglist_buttons             = my_table.join(
     awful.button({}, 1, function(t) t:view_only() end),
@@ -323,7 +323,7 @@ globalkeys = my_table.join(
     -- rofi
     awful.key({ modkey }, "space",
         function()
-                awful.spawn.with_shell("~/.config/rofi/launchers/type-1/launcher.sh")
+            awful.spawn.with_shell("~/.config/rofi/launchers/type-1/launcher.sh")
         end,
         { description = "show rofi", group = "hotkeys" }),
     -- awful.key({ modkey }, "p",
@@ -380,6 +380,8 @@ globalkeys = my_table.join(
     --{description = "run prompt", group = "super"}),
     awful.key({ modkey }, "x", function() awful.spawn.with_shell("~/.config/rofi/powermenu/type-6/powermenu.sh") end,
         { description = "exit", group = "hotkeys" }),
+    awful.key({ modkey }, "s", function() awful.spawn.with_shell("~/.config/rofi/applets/bin/mpd.sh") end,
+        { description = "mpd", group = "hotkeys" }),
     awful.key({ modkey }, "Escape", function() awful.util.spawn("xkill") end,
         { description = "Kill process", group = "hotkeys" }),
 
@@ -744,46 +746,46 @@ globalkeys = my_table.join(
     awful.key({}, "XF86AudioStop", function() awful.util.spawn("mpc stop") end),
 
     -- MPD control
-    awful.key({ modkey1, "Shift" }, "Up",
-        function()
-            os.execute("mpc toggle")
-            beautiful.mpd.update()
-        end,
-        { description = "mpc toggle", group = "widgets" }),
-    awful.key({ modkey1, "Shift" }, "Down",
-        function()
-            os.execute("mpc stop")
-            beautiful.mpd.update()
-        end,
-        { description = "mpc stop", group = "widgets" }),
-    awful.key({ modkey1, "Shift" }, "Left",
-        function()
-            os.execute("mpc prev")
-            beautiful.mpd.update()
-        end,
-        { description = "mpc prev", group = "widgets" }),
-    awful.key({ modkey1, "Shift" }, "Right",
-        function()
-            os.execute("mpc next")
-            beautiful.mpd.update()
-        end,
-        { description = "mpc next", group = "widgets" }),
-    awful.key({ modkey1, "Shift" }, "s",
+    -- awful.key({ modkey1, "Shift" }, "Up",
+    --     function()
+    --         os.execute("mpc toggle")
+    --         beautiful.mpd.update()
+    --     end,
+    --     { description = "mpc toggle", group = "widgets" }),
+    -- awful.key({ modkey1, "Shift" }, "Down",
+    --     function()
+    --         os.execute("mpc stop")
+    --         beautiful.mpd.update()
+    --     end,
+    --     { description = "mpc stop", group = "widgets" }),
+    -- awful.key({ modkey1, "Shift" }, "Left",
+    --     function()
+    --         os.execute("mpc prev")
+    --         beautiful.mpd.update()
+    --     end,
+    --     { description = "mpc prev", group = "widgets" }),
+    -- awful.key({ modkey1, "Shift" }, "Right",
+    --     function()
+    --         os.execute("mpc next")
+    --         beautiful.mpd.update()
+    --     end,
+    --     { description = "mpc next", group = "widgets" }),
+    -- awful.key({ modkey1, "Shift" }, "s",
 
 
 
-        function()
-            local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
-            if beautiful.mpd.timer.started then
-                beautiful.mpd.timer:stop()
-                common.text = common.text .. lain.util.markup.bold("OFF")
-            else
-                beautiful.mpd.timer:start()
-                common.text = common.text .. lain.util.markup.bold("ON")
-            end
-            naughty.notify(common)
-        end,
-        { description = "mpc on/off", group = "widgets" }),
+    --         function()
+    --             local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
+    --             if beautiful.mpd.timer.started then
+    --                 beautiful.mpd.timer:stop()
+    --                 common.text = common.text .. lain.util.markup.bold("OFF")
+    --             else
+    --                 beautiful.mpd.timer:start()
+    --                 common.text = common.text .. lain.util.markup.bold("ON")
+    --             end
+    --             naughty.notify(common)
+    --         end,
+    --         { description = "mpc on/off", group = "widgets" }),
 
     -- Copy primary to clipboard (terminals to gtk)
     --awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
