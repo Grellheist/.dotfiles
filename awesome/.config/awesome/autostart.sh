@@ -18,3 +18,4 @@ run syncthing
 # run anki
 run firefox
 run clipmenud
+run nohup easyeffects --gapplication-service
