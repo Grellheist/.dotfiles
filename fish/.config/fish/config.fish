@@ -496,6 +496,9 @@ alias lol="leagueoflegends start"
 # Create NextJS app 
 alias next="npx create-next-app@latest"
 
+# Create SvelteKit app 
+alias next="npm create svelte@latest"
+
 # Tmux
 alias ta="tmux new-session -A -s main"
 
