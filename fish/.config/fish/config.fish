@@ -508,6 +508,8 @@ alias dmenu="~/.local/bin/dmenu.sh"
 # Neofetch
 alias neofetch="neofetch --backend kitty --source ~/.config/neofetch/images/catgirl.jpg"
 
+# Weather
+alias weather="curl wttr.in"
 # reporting tools - install when not installed
 #neofetch
 #screenfetch
