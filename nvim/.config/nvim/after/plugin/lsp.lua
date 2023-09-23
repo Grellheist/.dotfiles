@@ -1,41 +1,39 @@
 local lsp = require('lsp-zero')
-lsp.preset('recommended')
-lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'rust_analyzer',
+
+lsp.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp.default_setup,
+  },
 })
-
--- Fix Undefined global 'vim'
--- lsp.configure('lua-language-server', {
---     settings = {
---         Lua = {
---             diagnostics = {
---                 globals = { 'vim' }
---             }
---         }
---     }
--- })
-
 
 local cmp = require('cmp')
 require("luasnip").filetype_extend("javascript", {"javascriptreact"})
 require("luasnip").filetype_extend("javascript", {"html"})
 
+local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
+  cmp.setup({
+    window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
     ['<cr>'] = cmp.mapping.confirm({ select = true }),
     ["<C-Space>"] = cmp.mapping.complete(),
-})
-
-cmp_mappings['<Tab>'] = nil
-cmp_mappings['<S-Tab>'] = nil
-
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
-})
+    ['<Tab>'] = nil,
+    ['<S-Tab>'] = nil
+    })
+  })
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
