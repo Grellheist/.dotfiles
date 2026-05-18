@@ -2,7 +2,7 @@ dependencies:
 	@echo "Running apt update..." 
 	@apt update
 	@echo "Running app installs..."
-	@apt install fish curl tar unzip starship stow -y
+	@apt install fish curl tar unzip starship stow eza -y
 	@curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 	@rm -rf /opt/nvim-linux-x86_64
 	@tar -C /opt -xzf nvim-linux-x86_64.tar.gz
